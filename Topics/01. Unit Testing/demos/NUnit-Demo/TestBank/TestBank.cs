@@ -1,117 +1,113 @@
 using System;
 using NUnit.Framework;
 
-[TestFixture, Explicit]
+[TestFixture]
 public class TestBank
 {
     [SetUp]
-    [Ignore]
     public void InitBeforeEachTest()
     {
         // TODO: to be implemented, remove ignore attribute
     }
 
     [TearDown]
-    [Ignore]
     public void DisposeAfterEachTest()
     {
         // TODO: to be implemented, remove ignore attribute
     }
-	
-	
+
+
     [TestFixtureSetUp]
-    [Ignore]
     public void Init()
     {
         // TODO: to be implemented
     }
 
     [TestFixtureTearDown]
-    [Ignore]
     public void Dispose()
     {
         // TODO: to be implemented
     }
 
-	[Test]
-	public void TestBankAddAccount()
-	{
-        Bank bank = new Bank(); 
+    [Test]
+    public void TestBankAddAccount()
+    {
+        Bank bank = new Bank();
         Account acc = new Account();
-		bank.AddAccount(acc);
-		Assert.AreEqual(bank.AccountsCount, 1);
-		Assert.AreSame(bank[0], acc);
-	}
+        bank.AddAccount(acc);
+        Assert.AreEqual(bank.AccountsCount, 1);
+        Assert.AreSame(bank[0], acc);
+    }
 
-	[Test]
-	[ExpectedException(typeof(ArgumentException))]
-	public void TestBankAddNullAccount()
-	{
+    [Test]
+    //old[ExpectedException(typeof(ArgumentException))]
+    public void TestBankAddNullAccount()
+    {
         Bank bank = new Bank();
         bank.AddAccount(null);
-	}
+    }
 
-	[Test]
-	public void TestBankAddRemoveAccount()
-	{
+    [Test]
+    public void TestBankAddRemoveAccount()
+    {
         Bank bank = new Bank();
         Account acc = new Account();
-		bank.AddAccount(acc);
-		Assert.AreEqual(bank.AccountsCount, 1);
-		bank.RemoveAccount(acc);
-		Assert.AreEqual(bank.AccountsCount, 0);
-	}
+        bank.AddAccount(acc);
+        Assert.AreEqual(bank.AccountsCount, 1);
+        bank.RemoveAccount(acc);
+        Assert.AreEqual(bank.AccountsCount, 0);
+    }
 
-	[Test]
-	[ExpectedException(typeof(ArgumentException))]
-	public void TestBankRemoveInvalidAccount()
-	{
+    [Test]
+    //old[ExpectedException(typeof(ArgumentException))]
+    public void TestBankRemoveInvalidAccount()
+    {
         Bank bank = new Bank();
         Account acc = new Account();
-		bank.AddAccount(acc);
-		Account anotherAcc = new Account();
-		bank.RemoveAccount(anotherAcc);
-	}
+        bank.AddAccount(acc);
+        Account anotherAcc = new Account();
+        bank.RemoveAccount(anotherAcc);
+    }
 
-	[Test]
-	[ExpectedException(typeof(ArgumentException))]
-	public void TestBankRemoveNullAccount()
-	{
+    [Test]
+    //old[ExpectedException(typeof(ArgumentException))]
+    public void TestBankRemoveNullAccount()
+    {
         Bank bank = new Bank();
         bank.RemoveAccount(null);
-	}
+    }
 
-	[Test]
-	public void TestBankAccountIndexer()
-	{
+    [Test]
+    public void TestBankAccountIndexer()
+    {
         Bank bank = new Bank();
         Account acc = new Account();
-		bank.AddAccount(acc);
-		Account sameAcc = bank[0];
-		Assert.AreSame(acc, sameAcc);
+        bank.AddAccount(acc);
+        Account sameAcc = bank[0];
+        Assert.AreSame(acc, sameAcc);
 
-		Account secondAcc = new Account();
-		bank.AddAccount(secondAcc);
-		Account sameSecondAcc = bank[1];
-		Assert.AreSame(secondAcc, sameSecondAcc);
+        Account secondAcc = new Account();
+        bank.AddAccount(secondAcc);
+        Account sameSecondAcc = bank[1];
+        Assert.AreSame(secondAcc, sameSecondAcc);
 
-		Assert.AreNotSame(sameAcc, sameSecondAcc);
-	}
+        Assert.AreNotSame(sameAcc, sameSecondAcc);
+    }
 
-	[Test]
-	[ExpectedException(typeof(ArgumentException))]
-	public void TestBankAccountIndexerInvalidRange()
-	{
+    [Test]
+    //old[ExpectedException(typeof(ArgumentException))]
+    public void TestBankAccountIndexerInvalidRange()
+    {
         Bank bank = new Bank();
         Account acc = new Account();
-		bank.AddAccount(acc);
-		Account accFromBank = bank[1];
-	}
+        bank.AddAccount(acc);
+        //Account accFromBank = bank[1];
+        Assert.Throws<ArgumentException>(() => { var accFomBank = bank[1]; });
+    }
 
-	[Test]
-	[Ignore]
-	public void TestBankIgnoreTest()
-	{
-		// TODO: to be implemented
-	}
+    [Test, Ignore("For test")]
+    public void TestBankIgnoreTest()
+    {
+        // TODO: to be implemented
+    }
 }

@@ -111,5 +111,13 @@ namespace TestBank
         {
             // This test is not executed
         }
+
+        //Access members with internal modifier
+        [TestMethod]
+        public void Test()
+        {
+            Bank bank = new Bank();
+            bank.BankInternal();
+        }
     }
 }
