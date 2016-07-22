@@ -112,12 +112,22 @@ namespace TestBank
             // This test is not executed
         }
 
-        //Access members with internal modifier
+        //Test members with internal modifier
         [TestMethod]
-        public void Test()
+        public void TestInternal()
         {
             Bank bank = new Bank();
-            bank.BankInternal();
+            var res = bank.BankInternal();
+            Assert.AreEqual(1, res);
+        }
+
+        //Test private members
+        [TestMethod]
+        public void TestPrivate()
+        {
+            PrivateObject privateObj = new PrivateObject(typeof(Bank));
+            var res = privateObj.Invoke("BankPrivate");
+            Assert.AreEqual(2, res);
         }
     }
 }

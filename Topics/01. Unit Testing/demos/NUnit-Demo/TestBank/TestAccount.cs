@@ -18,7 +18,7 @@ public class TestAccount
     public void TestDepositZero()
     {
         Account acc = new Account();
-        acc.Deposit(0);
+        Assert.Throws<ArgumentException>(() => acc.Deposit(0));
     }
 
     [Test]
@@ -44,7 +44,7 @@ public class TestAccount
     public void TestWithdrawZero()
     {
         Account acc = new Account();
-        acc.Withdraw(0);
+        Assert.Throws<ArgumentException>(() => acc.Withdraw(0));
     }
 
     [Test]
@@ -75,7 +75,7 @@ public class TestAccount
         Account source = null;
         Account dest = new Account();
         dest.Deposit(200.00F);
-        source.TransferFunds(dest, 100.00F);
+        Assert.Throws<NullReferenceException>(() => source.TransferFunds(dest, 100.00F));
     }
 
     [Test]
@@ -85,7 +85,7 @@ public class TestAccount
         Account source = new Account();
         source.Deposit(200.00F);
         Account dest = null;
-        source.TransferFunds(dest, 100.00F);
+        Assert.Throws<NullReferenceException>(() => source.TransferFunds(dest, 100.00F));
     }
 
     [Test]
@@ -95,7 +95,7 @@ public class TestAccount
         Account source = new Account();
         source.Deposit(200.00F);
         Account dest = source;
-        source.TransferFunds(dest, 100.00F);
+        Assert.Throws<ArgumentException>(() => source.TransferFunds(dest, 100.00F));
     }
 
     [Test]
@@ -114,6 +114,7 @@ public class TestAccount
         Assert.AreEqual(200.00F, dest.Balance);
     }
 
+    //parametrised tests
     [TestCase(200, 100, 100)]
     [TestCase(100, 200, -100)]
     public void ParametrizedTest(int deposit, int withdraw, int result)

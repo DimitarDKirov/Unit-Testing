@@ -57,4 +57,9 @@ public class Bank
     {
         return 1;
     }
+
+    private int BankPrivate()
+    {
+        return 2;
+    }
 }

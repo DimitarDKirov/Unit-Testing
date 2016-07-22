@@ -17,13 +17,13 @@ public class TestBank
     }
 
 
-    [TestFixtureSetUp]
+    [OneTimeSetUp]
     public void Init()
     {
         // TODO: to be implemented
     }
 
-    [TestFixtureTearDown]
+    [OneTimeTearDown]
     public void Dispose()
     {
         // TODO: to be implemented
@@ -44,7 +44,8 @@ public class TestBank
     public void TestBankAddNullAccount()
     {
         Bank bank = new Bank();
-        bank.AddAccount(null);
+        //bank.AddAccount(null);
+        Assert.Throws<ArgumentException>(() => bank.AddAccount(null));
     }
 
     [Test]
@@ -66,7 +67,7 @@ public class TestBank
         Account acc = new Account();
         bank.AddAccount(acc);
         Account anotherAcc = new Account();
-        bank.RemoveAccount(anotherAcc);
+        Assert.Throws<ArgumentException>(() => bank.RemoveAccount(anotherAcc));
     }
 
     [Test]
@@ -74,7 +75,7 @@ public class TestBank
     public void TestBankRemoveNullAccount()
     {
         Bank bank = new Bank();
-        bank.RemoveAccount(null);
+        Assert.Throws<ArgumentException>(() => bank.RemoveAccount(null));
     }
 
     [Test]
