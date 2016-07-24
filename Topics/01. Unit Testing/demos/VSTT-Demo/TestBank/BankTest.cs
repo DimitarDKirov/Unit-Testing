@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using MSTestExtensions;
 
 namespace TestBank
 {
@@ -40,12 +41,15 @@ namespace TestBank
             Assert.AreSame(bank[0], acc);
         }
 
+        //MSTestExtensions;
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        // [ExpectedException(typeof(ArgumentException))]
         public void TestBankAddNullAccount()
         {
             Bank bank = new Bank();
-            bank.AddAccount(null);
+            //bank.AddAccount(null);
+            ThrowsAssert.Throws<ArgumentException>(() => bank.AddAccount(null));
+
         }
 
         [TestMethod]
