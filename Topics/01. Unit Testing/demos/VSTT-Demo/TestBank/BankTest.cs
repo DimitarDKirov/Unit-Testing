@@ -133,5 +133,33 @@ namespace TestBank
             var res = privateObj.Invoke("BankPrivate");
             Assert.AreEqual(2, res);
         }
+
+        //Parametrized test
+        private TestContext testContext;
+        public BankTest()
+        {
+            this.TestContext = null;
+        }
+
+        public TestContext TestContext
+        {
+            get { return this.testContext; }
+            set { this.testContext = value; }
+        }
+
+        [TestMethod]
+        [DeploymentItem("TestBank\\ParamTest.xml")]
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML",
+                   "|DataDirectory|\\ParamTest.xml",
+                   "Row",
+                   DataAccessMethod.Sequential)]
+        public void ParametrizedTest_Sum()
+        {
+            int a = int.Parse((string)TestContext.DataRow["A"]);
+            int b = int.Parse((string)TestContext.DataRow["B"]);
+            int result = int.Parse((string)TestContext.DataRow["Result"]);
+            Bank bank = new Bank();
+            Assert.AreEqual(result, bank.Sum(a, b));
+        }
     }
 }

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Rows>
+  <Row>
+    <A>1</A>
+    <B>2</B>
+    <Result>3</Result>
+  </Row>
+  <Row>
+    <A>-10</A>
+    <B>25</B>
+    <Result>15</Result>
+  </Row>
+  <Row>
+    <A>10</A>
+    <B>25</B>
+    <Result>35</Result>
+  </Row>
+</Rows>
+
+<!--Properties -> CopyToOutputDirectory set to "CopyAlways".-->

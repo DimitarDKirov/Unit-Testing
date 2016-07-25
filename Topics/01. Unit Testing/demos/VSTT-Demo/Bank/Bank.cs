@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 //members with internal access modifier visible to Assemly "TestBank"
-[assembly: InternalsVisibleTo("TestBank")] 
+[assembly: InternalsVisibleTo("TestBank")]
 public class Bank
 {
     private List<Account> accounts;
@@ -61,5 +61,10 @@ public class Bank
     private int BankPrivate()
     {
         return 2;
+    }
+
+    public int Sum(int a, int b)
+    {
+        return a + b;
     }
 }
