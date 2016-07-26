@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentsAndCourses
 {
-    class Course
+    public class Course
     {
         private IList<Student> students;
 

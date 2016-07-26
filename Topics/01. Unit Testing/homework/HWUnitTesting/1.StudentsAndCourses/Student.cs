@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentsAndCourses
 {
-    class Student
+    public class Student
     {
         private string name;
         private int number;
@@ -24,7 +24,7 @@ namespace StudentsAndCourses
             get { return this.name; }
             set
             {
-                if (string.IsNullOrEmpty(name))
+                if (string.IsNullOrEmpty(value))
                 {
                     throw new ArgumentException("Name can not be empty");
                 }
