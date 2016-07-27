@@ -16,7 +16,7 @@ namespace StudentsAndCourses
             this.students = new List<Student>();
         }
 
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
         public ICollection<Student> Students
         {
