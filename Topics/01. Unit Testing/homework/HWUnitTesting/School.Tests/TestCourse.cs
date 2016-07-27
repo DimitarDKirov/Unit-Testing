@@ -9,16 +9,19 @@ namespace SchoolTests
     public class TestCourse
     {
         [TestMethod]
-        public void AddStudent_ShouldAddStudent()
+        public void Course_AddStudent_ShouldAdd30Students()
         {
             var course = new Course("Course");
-            var student = new Student("FakeStudent", 10001);
-            course.AddStudent(student);
-            Assert.AreEqual(1, course.Students.Count);
+            for (int i = 1; i <= 30; i++)
+            {
+                var student = new Student("FakeStudent" + i, 10000 + i);
+                course.AddStudent(student);
+            }
+            Assert.AreEqual(30, course.Students.Count);
         }
 
         [TestMethod]
-        public void RemoveStudent_ShouldRemoveStudent()
+        public void Course_RemoveStudent_ShouldRemoveStudent()
         {
             var course = new Course("Course");
             var student = new Student("FakeStudent", 10001);
@@ -38,7 +41,6 @@ namespace SchoolTests
                 var student = new Student("FakeStudent" + i, 10000 + i);
                 course.AddStudent(student);
             }
-            Assert.AreEqual(20, course.Students.Count);
         }
     }
 }
