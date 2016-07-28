@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Poker
 {
@@ -6,7 +7,19 @@ namespace Poker
     {
         public bool IsValidHand(IHand hand)
         {
-            throw new NotImplementedException();
+            if (hand == null)
+                return false;
+            if (hand.Cards == null)
+                return false;
+
+            if (hand.Cards.Count != 5)
+                return false;
+
+            var handSet = new HashSet<ICard>(hand.Cards);
+            if (handSet.Count != 5)
+                return false;
+
+            return true;
         }
 
         public bool IsStraightFlush(IHand hand)
