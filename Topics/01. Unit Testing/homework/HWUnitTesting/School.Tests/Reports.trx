@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="47035cf3-e0d1-44e8-893a-97590a9bfde1" name="dimki@KIROV-WORKSTATI 2016-07-29 01:43:36" runUser="KIROV-WORKSTATI\dimki" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="c3bf8698-6385-48dd-9e7f-b5d146a7d5b5">
+    <Deployment userDeploymentRoot="F:\Telerik\Unit Testing C#\MyRepo\Topics\01. Unit Testing\homework\HWUnitTesting\School.Tests" useDefaultDeploymentRoot="false" runDeploymentRoot="dimki_KIROV-WORKSTATI 2016-07-29 01_43_36" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Properties />
+  </TestSettings>
+  <Times creation="2016-07-29T01:43:36.0634847+03:00" queuing="2016-07-29T01:43:36.5395663+03:00" start="2016-07-29T01:43:36.6701139+03:00" finish="2016-07-29T01:43:36.8886450+03:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="11" executed="11" passed="11" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="CreateStudent_ShouldThrowIfNumberIsLessThan10000" storage="bin\debug\school.tests.dll" id="a23034f3-fe0a-5ef2-6920-a3d4b14a3b63">
+      <Execution timeOut="1800000" id="3f065e9a-53bb-44e1-9417-2952b18e70b9" />
+      <TestMethod codeBase="F:/Telerik/Unit Testing C#/MyRepo/Topics/01. Unit Testing/homework/HWUnitTesting/School.Tests/bin/Debug/School.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SchoolTests.TestStudent, School.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateStudent_ShouldThrowIfNumberIsLessThan10000" />
+    </UnitTest>
+    <UnitTest name="Course_AddStudent_ShouldAdd30Students" storage="bin\debug\school.tests.dll" id="d2fb5d0c-9db5-2a1e-b078-4342ab7bfbf7">
+      <Execution timeOut="1800000" id="566ab4c6-be16-425c-83b9-54e2fcc4be52" />
+      <TestMethod codeBase="F:/Telerik/Unit Testing C#/MyRepo/Topics/01. Unit Testing/homework/HWUnitTesting/School.Tests/bin/Debug/School.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SchoolTests.TestCourse, School.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Course_AddStudent_ShouldAdd30Students" />
+    </UnitTest>
+    <UnitTest name="CreateStudent_ShouldThrowIfNumberIsGreaterThan99999" storage="bin\debug\school.tests.dll" id="1b461155-7189-a409-b3cc-88fd17652fc7">
+      <Execution timeOut="1800000" id="18ecea03-77d6-4b22-bdf3-bcd9f581747c" />
+      <TestMethod codeBase="F:/Telerik/Unit Testing C#/MyRepo/Topics/01. Unit Testing/homework/HWUnitTesting/School.Tests/bin/Debug/School.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SchoolTests.TestStudent, School.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateStudent_ShouldThrowIfNumberIsGreaterThan99999" />
+    </UnitTest>
+    <UnitTest name="LeaveCourse_ShouldRemoveStudentFromTheCourse" storage="bin\debug\school.tests.dll" id="425bdeee-7eb9-c820-75ea-f48786da7025">
+      <Execution timeOut="1800000" id="13504b8d-5e74-4fee-b36c-b8f1174c7644" />
+      <TestMethod codeBase="F:/Telerik/Unit Testing C#/MyRepo/Topics/01. Unit Testing/homework/HWUnitTesting/School.Tests/bin/Debug/School.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SchoolTests.TestStudent, School.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LeaveCourse_ShouldRemoveStudentFromTheCourse" />
+    </UnitTest>
+    <UnitTest name="AddStudent_ShouldThrowIfStudentWithTheSameNumberExists" storage="bin\debug\school.tests.dll" id="83d3a7e4-99f3-4548-c698-ab54de1b87f7">
+      <Execution timeOut="1800000" id="edf6f151-db2b-4bba-8013-e21f009dd501" />
+      <TestMethod codeBase="F:/Telerik/Unit Testing C#/MyRepo/Topics/01. Unit Testing/homework/HWUnitTesting/School.Tests/bin/Debug/School.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SchoolTests.TestSchool, School.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddStudent_ShouldThrowIfStudentWithTheSameNumberExists" />
+    </UnitTest>
+    <UnitTest name="AddStudent_ShouldThrowIfMoreThan30StudentsAreAdded" storage="bin\debug\school.tests.dll" id="b49b77c0-62e6-309a-d7a2-0095f3c16e1a">
+      <Execution timeOut="1800000" id="ebcee4bb-2442-419d-8927-0c1de0f6d9ea" />
+      <TestMethod codeBase="F:/Telerik/Unit Testing C#/MyRepo/Topics/01. Unit Testing/homework/HWUnitTesting/School.Tests/bin/Debug/School.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SchoolTests.TestCourse, School.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddStudent_ShouldThrowIfMoreThan30StudentsAreAdded" />
+    </UnitTest>
+    <UnitTest name="CreateStudent_ShouldThrowIfNameIsEmpty" storage="bin\debug\school.tests.dll" id="36d49972-503e-8c5b-9160-3ba1e4ca9a36">
+      <Execution timeOut="1800000" id="3a3c2de1-65c8-424a-8b40-cd3230d054f4" />
+      <TestMethod codeBase="F:/Telerik/Unit Testing C#/MyRepo/Topics/01. Unit Testing/homework/HWUnitTesting/School.Tests/bin/Debug/School.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SchoolTests.TestStudent, School.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateStudent_ShouldThrowIfNameIsEmpty" />
+    </UnitTest>
+    <UnitTest name="Course_RemoveStudent_ShouldRemoveStudent" storage="bin\debug\school.tests.dll" id="75af0497-886f-5631-7786-f88e0063a700">
+      <Execution timeOut="1800000" id="e41f75bb-d140-443e-b5c3-e707ce8d8ad0" />
+      <TestMethod codeBase="F:/Telerik/Unit Testing C#/MyRepo/Topics/01. Unit Testing/homework/HWUnitTesting/School.Tests/bin/Debug/School.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SchoolTests.TestCourse, School.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Course_RemoveStudent_ShouldRemoveStudent" />
+    </UnitTest>
+    <UnitTest name="JoinCourse_ShouldAddStudentToTheCourse" storage="bin\debug\school.tests.dll" id="feaf5cb0-c6fe-0e32-0b62-5fdc0c6fb8e3">
+      <Execution timeOut="1800000" id="d0449729-fad2-451d-85a6-ecc7816f8811" />
+      <TestMethod codeBase="F:/Telerik/Unit Testing C#/MyRepo/Topics/01. Unit Testing/homework/HWUnitTesting/School.Tests/bin/Debug/School.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SchoolTests.TestStudent, School.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="JoinCourse_ShouldAddStudentToTheCourse" />
+    </UnitTest>
+    <UnitTest name="AddCourse_ShouldAddCourse" storage="bin\debug\school.tests.dll" id="070f38b4-ec83-4ee9-f09e-db5cadd21125">
+      <Execution timeOut="1800000" id="eea35f97-f9f3-40d6-8dfc-cc26eb2f3a13" />
+      <TestMethod codeBase="F:/Telerik/Unit Testing C#/MyRepo/Topics/01. Unit Testing/homework/HWUnitTesting/School.Tests/bin/Debug/School.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SchoolTests.TestSchool, School.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddCourse_ShouldAddCourse" />
+    </UnitTest>
+    <UnitTest name="AddStudent_ShouldAddStudent" storage="bin\debug\school.tests.dll" id="11c08802-4255-44ca-9558-0ea973c3976e">
+      <Execution timeOut="1800000" id="5191ca8c-82f1-43d9-8e87-de4e694afca9" />
+      <TestMethod codeBase="F:/Telerik/Unit Testing C#/MyRepo/Topics/01. Unit Testing/homework/HWUnitTesting/School.Tests/bin/Debug/School.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SchoolTests.TestSchool, School.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddStudent_ShouldAddStudent" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b49b77c0-62e6-309a-d7a2-0095f3c16e1a" executionId="ebcee4bb-2442-419d-8927-0c1de0f6d9ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d2fb5d0c-9db5-2a1e-b078-4342ab7bfbf7" executionId="566ab4c6-be16-425c-83b9-54e2fcc4be52" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="75af0497-886f-5631-7786-f88e0063a700" executionId="e41f75bb-d140-443e-b5c3-e707ce8d8ad0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="070f38b4-ec83-4ee9-f09e-db5cadd21125" executionId="eea35f97-f9f3-40d6-8dfc-cc26eb2f3a13" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="11c08802-4255-44ca-9558-0ea973c3976e" executionId="5191ca8c-82f1-43d9-8e87-de4e694afca9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="83d3a7e4-99f3-4548-c698-ab54de1b87f7" executionId="edf6f151-db2b-4bba-8013-e21f009dd501" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="36d49972-503e-8c5b-9160-3ba1e4ca9a36" executionId="3a3c2de1-65c8-424a-8b40-cd3230d054f4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1b461155-7189-a409-b3cc-88fd17652fc7" executionId="18ecea03-77d6-4b22-bdf3-bcd9f581747c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a23034f3-fe0a-5ef2-6920-a3d4b14a3b63" executionId="3f065e9a-53bb-44e1-9417-2952b18e70b9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="feaf5cb0-c6fe-0e32-0b62-5fdc0c6fb8e3" executionId="d0449729-fad2-451d-85a6-ecc7816f8811" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="425bdeee-7eb9-c820-75ea-f48786da7025" executionId="13504b8d-5e74-4fee-b36c-b8f1174c7644" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="ebcee4bb-2442-419d-8927-0c1de0f6d9ea" testId="b49b77c0-62e6-309a-d7a2-0095f3c16e1a" testName="AddStudent_ShouldThrowIfMoreThan30StudentsAreAdded" computerName="KIROV-WORKSTATI" duration="00:00:00.0389447" startTime="2016-07-29T01:43:36.7066268+03:00" endTime="2016-07-29T01:43:36.8116374+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ebcee4bb-2442-419d-8927-0c1de0f6d9ea">
+    </UnitTestResult>
+    <UnitTestResult executionId="566ab4c6-be16-425c-83b9-54e2fcc4be52" testId="d2fb5d0c-9db5-2a1e-b078-4342ab7bfbf7" testName="Course_AddStudent_ShouldAdd30Students" computerName="KIROV-WORKSTATI" duration="00:00:00.0027572" startTime="2016-07-29T01:43:36.8131374+03:00" endTime="2016-07-29T01:43:36.8171372+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="566ab4c6-be16-425c-83b9-54e2fcc4be52">
+    </UnitTestResult>
+    <UnitTestResult executionId="e41f75bb-d140-443e-b5c3-e707ce8d8ad0" testId="75af0497-886f-5631-7786-f88e0063a700" testName="Course_RemoveStudent_ShouldRemoveStudent" computerName="KIROV-WORKSTATI" duration="00:00:00.0015434" startTime="2016-07-29T01:43:36.8181369+03:00" endTime="2016-07-29T01:43:36.8201402+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e41f75bb-d140-443e-b5c3-e707ce8d8ad0">
+    </UnitTestResult>
+    <UnitTestResult executionId="eea35f97-f9f3-40d6-8dfc-cc26eb2f3a13" testId="070f38b4-ec83-4ee9-f09e-db5cadd21125" testName="AddCourse_ShouldAddCourse" computerName="KIROV-WORKSTATI" duration="00:00:00.0016640" startTime="2016-07-29T01:43:36.8206401+03:00" endTime="2016-07-29T01:43:36.8231398+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eea35f97-f9f3-40d6-8dfc-cc26eb2f3a13">
+    </UnitTestResult>
+    <UnitTestResult executionId="5191ca8c-82f1-43d9-8e87-de4e694afca9" testId="11c08802-4255-44ca-9558-0ea973c3976e" testName="AddStudent_ShouldAddStudent" computerName="KIROV-WORKSTATI" duration="00:00:00.0017501" startTime="2016-07-29T01:43:36.8241378+03:00" endTime="2016-07-29T01:43:36.8261379+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5191ca8c-82f1-43d9-8e87-de4e694afca9">
+    </UnitTestResult>
+    <UnitTestResult executionId="edf6f151-db2b-4bba-8013-e21f009dd501" testId="83d3a7e4-99f3-4548-c698-ab54de1b87f7" testName="AddStudent_ShouldThrowIfStudentWithTheSameNumberExists" computerName="KIROV-WORKSTATI" duration="00:00:00.0013081" startTime="2016-07-29T01:43:36.8271373+03:00" endTime="2016-07-29T01:43:36.8291378+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="edf6f151-db2b-4bba-8013-e21f009dd501">
+    </UnitTestResult>
+    <UnitTestResult executionId="3a3c2de1-65c8-424a-8b40-cd3230d054f4" testId="36d49972-503e-8c5b-9160-3ba1e4ca9a36" testName="CreateStudent_ShouldThrowIfNameIsEmpty" computerName="KIROV-WORKSTATI" duration="00:00:00.0009902" startTime="2016-07-29T01:43:36.8296382+03:00" endTime="2016-07-29T01:43:36.8311374+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3a3c2de1-65c8-424a-8b40-cd3230d054f4">
+    </UnitTestResult>
+    <UnitTestResult executionId="18ecea03-77d6-4b22-bdf3-bcd9f581747c" testId="1b461155-7189-a409-b3cc-88fd17652fc7" testName="CreateStudent_ShouldThrowIfNumberIsGreaterThan99999" computerName="KIROV-WORKSTATI" duration="00:00:00.0014396" startTime="2016-07-29T01:43:36.8321382+03:00" endTime="2016-07-29T01:43:36.8346425+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="18ecea03-77d6-4b22-bdf3-bcd9f581747c">
+    </UnitTestResult>
+    <UnitTestResult executionId="3f065e9a-53bb-44e1-9417-2952b18e70b9" testId="a23034f3-fe0a-5ef2-6920-a3d4b14a3b63" testName="CreateStudent_ShouldThrowIfNumberIsLessThan10000" computerName="KIROV-WORKSTATI" duration="00:00:00.0009859" startTime="2016-07-29T01:43:36.8346425+03:00" endTime="2016-07-29T01:43:36.8366418+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f065e9a-53bb-44e1-9417-2952b18e70b9">
+    </UnitTestResult>
+    <UnitTestResult executionId="d0449729-fad2-451d-85a6-ecc7816f8811" testId="feaf5cb0-c6fe-0e32-0b62-5fdc0c6fb8e3" testName="JoinCourse_ShouldAddStudentToTheCourse" computerName="KIROV-WORKSTATI" duration="00:00:00.0012366" startTime="2016-07-29T01:43:36.8376446+03:00" endTime="2016-07-29T01:43:36.8396465+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d0449729-fad2-451d-85a6-ecc7816f8811">
+    </UnitTestResult>
+    <UnitTestResult executionId="13504b8d-5e74-4fee-b36c-b8f1174c7644" testId="425bdeee-7eb9-c820-75ea-f48786da7025" testName="LeaveCourse_ShouldRemoveStudentFromTheCourse" computerName="KIROV-WORKSTATI" duration="00:00:00.0012120" startTime="2016-07-29T01:43:36.8406428+03:00" endTime="2016-07-29T01:43:36.8426413+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="13504b8d-5e74-4fee-b36c-b8f1174c7644">
+    </UnitTestResult>
+  </Results>
+</TestRun>

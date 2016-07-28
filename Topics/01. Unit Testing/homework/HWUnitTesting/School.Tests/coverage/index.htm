@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html data-ng-app="coverageApp">
+<head>
+<meta charset="utf-8" />
+<title>Summary - Coverage Report</title>
+<link rel="stylesheet" type="text/css" href="report.css" />
+</head><body data-ng-controller="SummaryViewCtrl"><div class="container">
+<h1>Summary</h1>
+<table class="overview">
+<colgroup>
+<col class="column135" />
+<col />
+</colgroup>
+<tbody>
+<tr><th>Generated on:</th><td>29.07.2016 г. - 1:43:38</td></tr>
+<tr><th>Parser:</th><td>OpenCoverParser</td></tr>
+<tr><th>Assemblies:</th><td>2</td></tr>
+<tr><th>Classes:</th><td>6</td></tr>
+<tr><th>Files:</th><td>6</td></tr>
+<tr><th>Covered lines:</th><td>129</td></tr>
+<tr><th>Uncovered lines:</th><td>6</td></tr>
+<tr><th>Coverable lines:</th><td>135</td></tr>
+<tr><th>Total lines:</th><td>298</td></tr>
+<tr><th>Line coverage:</th><td>95.5%</td></tr>
+<tr><th>Branch coverage:</th><td>91.6%</td></tr>
+</tbody>
+</table>
+<h1>Assemblies</h1>
+<div data-ng-if="filteringEnabled" data-reactive-table data-data="assemblies"></div>
+<div data-ng-if="!filteringEnabled">
+<div class="ng-hide customizebox" data-ng-show="true"><input data-ng-click="enableFiltering()" value="Enable filtering" title="This may take some time since the report contains many classes." type="submit" /></div>
+</div>
+<table data-ng-if="!filteringEnabled" class="overview">
+<colgroup>
+<col />
+<col class="column90" />
+<col class="column105" />
+<col class="column100" />
+<col class="column70" />
+<col class="column60" />
+<col class="column112" />
+<col class="column60" />
+<col class="column112" />
+</colgroup>
+<thead><tr><th>Name</th><th class="right">Covered</th><th class="right">Uncovered</th><th class="right">Coverable</th><th class="right">Total</th><th class="center" colspan="2">Line coverage</th><th class="center" colspan="2">Branch coverage</th></tr></thead>
+<tbody>
+<tr><th>School</th><th class="right">68</th><th class="right">1</th><th class="right">69</th><th class="right">161</th><th title="LineCoverage" class="right">98.5%</th><th><table class="coverage"><tr><td class="green covered98">&nbsp;</td><td class="red covered2">&nbsp;</td></tr></table></th><th class="right">100%</th><th><table class="coverage"><tr><td class="green covered100">&nbsp;</td></tr></table></th></tr>
+<tr><td><a href="School_Course.htm">StudentsAndCourses.Course</a></td><td class="right">18</td><td class="right">0</td><td class="right">18</td><td class="right">43</td><td title="LineCoverage" class="right">100%</td><td><table class="coverage"><tr><td class="green covered100">&nbsp;</td></tr></table></td><td class="right">100%</td><td><table class="coverage"><tr><td class="green covered100">&nbsp;</td></tr></table></td></tr>
+<tr><td><a href="School_School.htm">StudentsAndCourses.School</a></td><td class="right">20</td><td class="right">0</td><td class="right">20</td><td class="right">50</td><td title="LineCoverage" class="right">100%</td><td><table class="coverage"><tr><td class="green covered100">&nbsp;</td></tr></table></td><td class="right">100%</td><td><table class="coverage"><tr><td class="green covered100">&nbsp;</td></tr></table></td></tr>
+<tr><td><a href="School_Student.htm">StudentsAndCourses.Student</a></td><td class="right">30</td><td class="right">1</td><td class="right">31</td><td class="right">68</td><td title="LineCoverage" class="right">96.7%</td><td><table class="coverage"><tr><td class="green covered97">&nbsp;</td><td class="red covered3">&nbsp;</td></tr></table></td><td class="right">100%</td><td><table class="coverage"><tr><td class="green covered100">&nbsp;</td></tr></table></td></tr>
+<tr><th>School.Tests</th><th class="right">61</th><th class="right">5</th><th class="right">66</th><th class="right">137</th><th title="LineCoverage" class="right">92.4%</th><th><table class="coverage"><tr><td class="green covered92">&nbsp;</td><td class="red covered8">&nbsp;</td></tr></table></th><th class="right">75%</th><th><table class="coverage"><tr><td class="green covered75">&nbsp;</td><td class="red covered25">&nbsp;</td></tr></table></th></tr>
+<tr><td><a href="School.Tests_TestCourse.htm">SchoolTests.TestCourse</a></td><td class="right">24</td><td class="right">1</td><td class="right">25</td><td class="right">46</td><td title="LineCoverage" class="right">96%</td><td><table class="coverage"><tr><td class="green covered96">&nbsp;</td><td class="red covered4">&nbsp;</td></tr></table></td><td class="right">75%</td><td><table class="coverage"><tr><td class="green covered75">&nbsp;</td><td class="red covered25">&nbsp;</td></tr></table></td></tr>
+<tr><td><a href="School.Tests_TestSchool.htm">SchoolTests.TestSchool</a></td><td class="right">18</td><td class="right">1</td><td class="right">19</td><td class="right">40</td><td title="LineCoverage" class="right">94.7%</td><td><table class="coverage"><tr><td class="green covered95">&nbsp;</td><td class="red covered5">&nbsp;</td></tr></table></td><td class="right"></td><td><table class="coverage"><tr><td class="gray covered100">&nbsp;</td></tr></table></td></tr>
+<tr><td><a href="School.Tests_TestStudent.htm">SchoolTests.TestStudent</a></td><td class="right">19</td><td class="right">3</td><td class="right">22</td><td class="right">51</td><td title="LineCoverage" class="right">86.3%</td><td><table class="coverage"><tr><td class="green covered86">&nbsp;</td><td class="red covered14">&nbsp;</td></tr></table></td><td class="right"></td><td><table class="coverage"><tr><td class="gray covered100">&nbsp;</td></tr></table></td></tr>
+</tbody>
+</table>
+<div class="footer">Generated by: ReportGenerator 2.4.5.0<br />29.07.2016 г. - 1:43:38<br /><a href="https://github.com/danielpalme/ReportGenerator">GitHub</a> | <a href="http://www.palmmedia.de">www.palmmedia.de</a></div></div>
+<script type="text/javascript" src="combined.js"></script>
+</body></html>
