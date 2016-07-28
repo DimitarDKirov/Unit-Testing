@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School", "1.StudentsAndCourses\School.csproj", "{32E60F73-8104-4C4D-B2F8-515B2E84E934}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Tests", "School.Tests\School.Tests.csproj", "{91806F96-A808-411E-96CB-A6A4189622C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Santase.Logic", "Santase.Logic\Santase.Logic.csproj", "{C82BEBF4-ED79-48FB-A2AB-4E0D1767B95F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Santase.Logic.Test", "Santase.Logic.Test\Santase.Logic.Test.csproj", "{D12E068B-8ED7-46B7-A873-CCEC42F16B0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C82BEBF4-ED79-48FB-A2AB-4E0D1767B95F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C82BEBF4-ED79-48FB-A2AB-4E0D1767B95F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C82BEBF4-ED79-48FB-A2AB-4E0D1767B95F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D12E068B-8ED7-46B7-A873-CCEC42F16B0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D12E068B-8ED7-46B7-A873-CCEC42F16B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D12E068B-8ED7-46B7-A873-CCEC42F16B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D12E068B-8ED7-46B7-A873-CCEC42F16B0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
