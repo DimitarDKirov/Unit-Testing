@@ -8,7 +8,7 @@ namespace Poker
         public bool IsValidHand(IHand hand)
         {
             if (hand == null)
-                return false;
+                throw new NullReferenceException();
             if (hand.Cards == null)
                 return false;
 

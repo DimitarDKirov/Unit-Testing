@@ -17,5 +17,14 @@ namespace Poker
         {
             return string.Format("{0}.{1}", this.Face, this.Suit);
         }
+
+        public override bool Equals(object obj)
+        {
+            var otherCard = obj as Card;
+            if (otherCard == null)
+                return false;
+
+            return this.Face == otherCard.Face && this.Suit == otherCard.Suit;
+        }
     }
 }
