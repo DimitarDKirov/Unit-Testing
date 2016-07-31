@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Poker
 {
@@ -15,9 +16,14 @@ namespace Poker
             if (hand.Cards.Count != 5)
                 return false;
 
-            var handSet = new HashSet<ICard>(hand.Cards);
-            if (handSet.Count != 5)
-                return false;
+            for (int i = 0; i < hand.Cards.Count - 1; i++)
+            {
+                for (int j = i + 1; j < hand.Cards.Count; j++)
+                {
+                    if (hand.Cards[i].Face == hand.Cards[j].Face && hand.Cards[i].Suit == hand.Cards[j].Suit)
+                        return false;
+                }
+            }
 
             return true;
         }
@@ -29,7 +35,18 @@ namespace Poker
 
         public bool IsFourOfAKind(IHand hand)
         {
-            throw new NotImplementedException();
+            if (hand == null)
+            {
+                throw new NullReferenceException();
+            }
+
+            if (!this.IsValidHand(hand))
+                return false;
+            var h = hand.Cards.GroupBy(c => c.Face);
+            if (hand.Cards.GroupBy(c => c.Face).Any(g => g.Count() == 4))
+                return true;
+
+            return false;
         }
 
         public bool IsFullHouse(IHand hand)
@@ -39,7 +56,18 @@ namespace Poker
 
         public bool IsFlush(IHand hand)
         {
-            throw new NotImplementedException();
+            if (hand == null)
+            {
+                throw new NullReferenceException();
+            }
+
+            if (!this.IsValidHand(hand))
+                return false;
+
+            if (hand.Cards.Any(c => c.Suit != hand.Cards[0].Suit))
+                return false;
+
+            return true;
         }
 
         public bool IsStraight(IHand hand)
