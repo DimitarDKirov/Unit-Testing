@@ -31,6 +31,5 @@ namespace Cosmetics.Tests.Mocked
                 return this.products;
             }
         }
-
     }
 }

@@ -41,7 +41,8 @@ namespace Cosmetics.Tests
                 message = e.Message;
             }
             Assert.IsInstanceOfType(ex, typeof(ArgumentNullException));
-            Assert.IsTrue(message.IndexOf("Name") > 0);
+            //Assert.IsTrue(message.IndexOf("Name") > 0);
+            StringAssert.Contains(message, "Name");
         }
 
         [TestMethod]
@@ -59,7 +60,7 @@ namespace Cosmetics.Tests
                 message = e.Message;
             }
             Assert.IsInstanceOfType(ex, typeof(ArgumentNullException));
-            Assert.IsTrue(message.IndexOf("List") > 0);
+            StringAssert.Contains(message, "List");
         }
     }
 }

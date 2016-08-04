@@ -20,7 +20,7 @@
             mockedCarsRepository.Setup(r => r.Remove(It.IsAny<Car>())).Verifiable();
             mockedCarsRepository.Setup(r => r.SortedByMake()).Returns(this.FakeCarCollection.OrderBy(c => c.Make).ToList());
             mockedCarsRepository.Setup(r => r.SortedByYear()).Returns(this.FakeCarCollection.OrderBy(c => c.Year).ToList());
-            mockedCarsRepository.Setup(r => r.GetById(It.Is<int>(i => i >= 100))).Returns(() => null);
+            mockedCarsRepository.Setup(r => r.GetById(int.MaxValue)).Returns(() => null);
             this.CarsData = mockedCarsRepository.Object;
         }
     }

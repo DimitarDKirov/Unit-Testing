@@ -64,7 +64,7 @@ namespace Cosmetics.Tests
             engine.Start();
             //mockedCategory.Verify(c => c.AddCosmetics(It.Is<IProduct>(p => p==shampoo)));
             var prObj = new PrivateObject(mockedCategory);
-            var productsInCategory =  prObj.GetField("products") as List<IProduct>;
+            var productsInCategory = prObj.GetField("products") as List<IProduct>;
             Assert.AreSame(shampoo, productsInCategory[0]);
         }
 
@@ -102,6 +102,67 @@ namespace Cosmetics.Tests
             engine.Start();
 
             mockedCategory.Verify(c => c.Print(), Times.Once());
+        }
+
+        [TestMethod]
+        public void Start_ShouldRunCreateShampoo_WhenParametersAreProper()
+        {
+            IShampoo shampoo = new Shampoo("test", "test", 0, GenderType.Unisex, 0, UsageType.Medical);
+            var mockedFactory = new Mock<ICosmeticsFactory>();
+            mockedFactory.Setup(f => f.CreateShampoo(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<decimal>(), It.IsAny<GenderType>(), It.IsAny<uint>(), It.IsAny<UsageType>())).Returns(shampoo);
+
+            var mockedShoppingCart = new Mock<IShoppingCart>();
+            var engine = new MockedCosmeticsEngine(mockedFactory.Object, mockedShoppingCart.Object);
+            this.MockConsole("CreateShampoo Cool Nivea 0.50 men 500 everyday");
+            engine.Start();
+
+            Assert.AreSame(shampoo, engine.Products["Cool"]);
+        }
+
+        [TestMethod]
+        public void Start_ShouldRunCreateToothpaste_WhenParametersAreProper()
+        {
+            IToothpaste toothpaste = new Toothpaste("test", "test", 0, GenderType.Unisex, new List<string>());
+            var mockedFactory = new Mock<ICosmeticsFactory>();
+            mockedFactory.Setup(f => f.CreateToothpaste(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<decimal>(), It.IsAny<GenderType>(), It.IsAny<IList<string>>())).Returns(toothpaste);
+
+            var mockedShoppingCart = new Mock<IShoppingCart>();
+            var engine = new MockedCosmeticsEngine(mockedFactory.Object, mockedShoppingCart.Object);
+            this.MockConsole("CreateToothpaste White+ Colgate 15.50 men fluor,bqla,golqma");
+            engine.Start();
+
+            Assert.AreSame(toothpaste, engine.Products["White+"]);
+        }
+
+        [TestMethod]
+        public void Start_ShouldRunAddToShoppingCart_WhenProperParameters()
+        {
+            IShampoo shampoo = new Shampoo("test", "test", 0, GenderType.Unisex, 0, UsageType.Medical);
+            var mockedFactory = new Mock<ICosmeticsFactory>();
+            var mockedShoppingCart = new Mock<IShoppingCart>();
+            var engine = new MockedCosmeticsEngine(mockedFactory.Object, mockedShoppingCart.Object);
+            engine.Products.Add("testShampoo", shampoo);
+            this.MockConsole("AddToShoppingCart testShampoo");
+            engine.Start();
+
+            mockedShoppingCart.Verify(s => s.AddProduct(shampoo));
+        }
+
+        [TestMethod]
+        public void Start_RunRemoveFromShoppingCart_WhenProperParametersInvoked()
+        {
+            IShampoo shampoo = new Shampoo("test", "test", 0, GenderType.Unisex, 0, UsageType.Medical);
+            var mockedFactory = new Mock<ICosmeticsFactory>();
+            var mockedShoppingCart = new Mock<IShoppingCart>();
+            mockedShoppingCart.Setup(c => c.ContainsProduct(shampoo)).Returns(true);
+            var engine = new MockedCosmeticsEngine(mockedFactory.Object, mockedShoppingCart.Object);
+            engine.Products.Add("testShampoo", shampoo);
+            PrivateObject privateObj = new PrivateObject(engine);
+
+            this.MockConsole("RemoveFromShoppingCart testShampoo");
+            engine.Start();
+
+            mockedShoppingCart.Verify(s => s.RemoveProduct(shampoo));
         }
 
         private void MockConsole(string input)
