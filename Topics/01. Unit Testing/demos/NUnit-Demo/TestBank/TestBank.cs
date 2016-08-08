@@ -45,7 +45,8 @@ public class TestBank
     {
         Bank bank = new Bank();
         //bank.AddAccount(null);
-        Assert.Throws<ArgumentException>(() => bank.AddAccount(null));
+        var ex = Assert.Throws<ArgumentException>(() => bank.AddAccount(null));
+        StringAssert.Contains("accounts are not", ex.Message);
     }
 
     [Test]

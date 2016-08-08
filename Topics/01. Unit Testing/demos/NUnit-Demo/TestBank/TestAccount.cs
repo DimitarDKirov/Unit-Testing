@@ -95,7 +95,6 @@ public class TestAccount
         Account source = new Account();
         source.Deposit(200.00F);
         Account dest = source;
-        Assert.Throws<ArgumentException>(() => source.TransferFunds(dest, 100.00F));
     }
 
     [Test]

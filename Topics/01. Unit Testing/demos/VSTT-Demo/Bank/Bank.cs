@@ -67,4 +67,16 @@ public class Bank
     {
         return a + b;
     }
+
+    public IList<Account> Accounts
+    {
+        get
+        {
+            return new List<Account>()
+            {
+                new Account(),
+                new Account()
+            };
+        }
+    }
 }

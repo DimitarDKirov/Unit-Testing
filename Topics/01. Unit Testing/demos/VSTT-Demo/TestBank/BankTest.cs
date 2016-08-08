@@ -1,6 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using MSTestExtensions;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace TestBank
 {
@@ -42,14 +44,15 @@ namespace TestBank
         }
 
         //MSTestExtensions;
+        //StringAssert
         [TestMethod]
         // [ExpectedException(typeof(ArgumentException))]
         public void TestBankAddNullAccount()
         {
             Bank bank = new Bank();
             //bank.AddAccount(null);
-            ThrowsAssert.Throws<ArgumentException>(() => bank.AddAccount(null));
-
+            var ex = ThrowsAssert.Throws<ArgumentException>(() => bank.AddAccount(null));
+            StringAssert.Contains(ex.Message, "accounts are");
         }
 
         [TestMethod]
@@ -160,6 +163,19 @@ namespace TestBank
             int result = int.Parse((string)TestContext.DataRow["Result"]);
             Bank bank = new Bank();
             Assert.AreEqual(result, bank.Sum(a, b));
+        }
+
+        //CollectionAssert
+        [TestMethod]
+        public void CollectionTests()
+        {
+            Bank bank = new Bank();
+            ICollection accounts = (ICollection)bank.Accounts;
+            CollectionAssert.AllItemsAreInstancesOfType(accounts, typeof(Account));
+            CollectionAssert.AllItemsAreNotNull(accounts);
+            CollectionAssert.AllItemsAreUnique(accounts);
+            CollectionAssert.IsSubsetOf(new List<int>() { 1, 2, 3 }, new List<int>() { 5, 1, 2, 3, 6 });
+            CollectionAssert.Contains(new List<int>() { 1, 2, 3 }, 2);
         }
     }
 }
