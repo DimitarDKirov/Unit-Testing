@@ -1,6 +1,10 @@
-# High-Quality Code - Unit Testing
+## Unit Testing
 
+<<<<<<< HEAD
 My repository for the course [Unit Testing](https://telerikacademy.com/Courses/Courses/Details/345) at [Telerik Academy](https://telerikacademy.com)
+=======
+Repository for the course [Unit Testing](https://telerikacademy.com/Courses/Courses/Details/410) at [Telerik Academy](https://telerikacademy.com)
+>>>>>>> 0af067abf625ddab1d7b2b55a90a426464a9c007
 
 
 ## Course program
